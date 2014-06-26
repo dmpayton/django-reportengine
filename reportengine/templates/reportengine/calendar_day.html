@@ -1,4 +1,5 @@
 {% extends "reportengine/calendar.html" %}
+{% load url from future %}
 
 {% block calendar_breadcrumb %}{{ date|date:"d M Y" }}{% endblock %}
 
@@ -7,7 +8,7 @@
 
     <ul>
     {% for r in reports %}
-    <li><a href="{% url reports-date-range date.year date.month date.day r.namespace r.slug %}">{{ r.verbose_name }}</a></li>
+    <li><a href="{% url "reports-date-range" date.year date.month date.day r.namespace r.slug %}">{{ r.verbose_name }}</a></li>
     {% endfor %}
     </ul>
 
