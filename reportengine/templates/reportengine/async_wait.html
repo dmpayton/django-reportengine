@@ -19,7 +19,7 @@
 
 {% block breadcrumbs %}
 <div class="breadcrumbs">
-     <a href="{% url "admin:index" %">{% trans "Home" %}</a> &rsaquo;
+     <a href="{% url "admin:index" %}">{% trans "Home" %}</a> &rsaquo;
      <a href="{% url "reports-list" %}">{% trans "Reports" %}</a> &rsaquo;
      <a href="{{ report_request.get_report_url }}">{{report.verbose_name}}</a> &rsaquo;
      {% if format %}
